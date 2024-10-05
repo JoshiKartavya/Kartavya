@@ -9,7 +9,7 @@ import Footer from './sections/footer/Footer'
 
 const page = () => {
   return (
-    <div className='text-center text-9xl font-black flex flex-col gap-12'>
+    <div className='text-center text-9xl font-black flex flex-col'>
       <Hero />
       <Bento />
       <About />

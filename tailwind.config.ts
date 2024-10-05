@@ -12,6 +12,11 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        bruno: ['"Bruno Ace"', 'sans-serif'],
+        noto: ['"Noto Sans"', 'sans-serif'],
+        bebas: ['"Bebas Neue"', 'sans-serif']
+      },
     },
   },
   plugins: [],
