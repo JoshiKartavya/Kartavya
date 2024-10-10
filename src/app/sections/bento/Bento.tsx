@@ -2,32 +2,25 @@ import React from 'react'
 
 const Bento = () => {
   return (
-    <div className='h-screen w-full flex flex-col justify-center items-center bg-[--contrast] text-[--secondary]'>
+    <div className='h-screen w-full flex flex-col justify-center items-center bg-[--primary] text-[--secondary]'>
       <div className="flex h-full w-full items-center justify-center">
-        <div className="grid h-full w-full gap-4 bg-gray-200 p-2 grid-cols-5 grid-rows-3 rounded-lg shadow-md">
-          <div className="col-span-2 row-span-2 bg-pink-200 rounded-lg shadow-md flex items-center justify-center">
-            <p>Salmon</p>
+        <div className="grid h-[90%] w-[90%] gap-3 p-2 grid-cols-5 grid-rows-3 rounded-lg">
+          <div className="col-span-2 row-span-2 border-2 border-[#222222] rounded-lg shadow-md flex items-center justify-center">
           </div>
 
-          <div className="col-span-3 row-span-1 bg-lime-200 rounded-lg shadow-md flex items-center justify-center">
-            <p>Broccoli</p>
+          <div className="col-span-3 row-span-1 border-2 border-[#222222] rounded-lg shadow-md flex items-center justify-center">
           </div>
 
-          <div className="col-span-1 row-span-1 bg-yellow-200 rounded-lg shadow-md flex items-center justify-center">
-            <p>Tamago</p>
+          <div className="col-span-1 row-span-1 border-2 border-[#222222] rounded-lg shadow-md flex items-center justify-center">
           </div>
 
-          <div className="col-span-2 row-span-2 bg-tan-200 rounded-lg shadow-md flex items-center justify-center">
-            <p>Pork</p>
+          <div className="col-span-2 row-span-2 border-2 border-[#222222] rounded-lg shadow-md flex items-center justify-center">
           </div>
-
-          <div className="col-span-3 row-span-1 bg-green-200 rounded-lg shadow-md flex items-center justify-center">
-            <p>Edamame</p>
+          
+          <div className="col-span-3 row-span-1 border-2 border-[#222222] rounded-lg shadow-md flex items-center justify-center">
           </div>
-
         </div>
       </div>
-
     </div>
   )
 }
