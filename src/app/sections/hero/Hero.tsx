@@ -8,7 +8,7 @@ const Hero = () => {
       <div className='h-screen w-full flex flex-col justify-start items-center bg-[--primary] text-[--secondary]'>
         <Navbar />
         <div className="hero w-full h-[80vh]">
-          <h1 className='text-[21rem] font-bebas uppercase'>Kartavya joshi</h1>
+          <h1 className='text-[19rem] font-bebas uppercase'>Kartavya joshi</h1>
           <div className="img absolute z-10 left-[54%] top-[40%]">
             <Image src="/kartavya.png" alt='kartavya' width={350} height={350} />
           </div>
