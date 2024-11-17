@@ -27,6 +27,14 @@ const Work = () => {
       description: 'EcoShop is a web app that encourages sustainable shopping by providing users with eco-friendly product alternatives.',
       categories: ['Design', 'Frontend'],
       imgSrc: '/work.png'
+    },
+    {
+      type: 'Web Application',
+      year: '2022',
+      title: 'EcoShop - Sustainable Shopping',
+      description: 'EcoShop is a web app that encourages sustainable shopping by providing users with eco-friendly product alternatives.',
+      categories: ['Design', 'Frontend'],
+      imgSrc: '/work.png'
     }
     // Add more projects as needed
   ];
