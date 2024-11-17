@@ -14,19 +14,19 @@ const Footer = () => {
         <a href="#"><i className="ri-twitter-x-fill text-2xl xl:text-4xl cursor-pointer" /></a>
         <a href="#"><i className="ri-youtube-fill text-2xl xl:text-4xl cursor-pointer" /></a>
         <div className='links flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-8'>
-          {links.map((e)=>{
-            return <a href={e}>
+          {links.map((e, index) => (
+            <a href={e} key={index}> {/* Add unique key */}
               <h1 className='text-xl xl:text-4xl font-normal font-bebas tracking-wider'>{e}</h1>
             </a>
-          })}
+          ))}
         </div>
         <a href="#"><i className="ri-github-fill text-2xl xl:text-4xl cursor-pointer" /></a>
         <a href="#"><i className="ri-instagram-fill text-2xl xl:text-4xl cursor-pointer" /></a>
         <a href="#"><i className="ri-dribbble-fill text-2xl xl:text-4xl cursor-pointer" /></a>
       </div>
       <div className="socials flex flex-row justify-center items-center gap-4 py-8">
-        <Button className='text-xl xl:text-2xl' text='Email Me!' onClick={()=>{}} />
-        <Button className='text-xl xl:text-2xl' text='Book a call' onClick={()=>{}} />
+        <Button className='text-xl xl:text-2xl' text='Email Me!' onClick={() => {}} />
+        <Button className='text-xl xl:text-2xl' text='Book a call' onClick={() => {}} />
       </div>
       <div className="copyright text-center text-sm xl:text-2xl font-light font-nato tracking-wider">
         <p>Copyright &copy; {new Date().getFullYear()} All rights reserved by kartavya joshi</p>

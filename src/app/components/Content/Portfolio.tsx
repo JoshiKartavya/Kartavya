@@ -14,10 +14,6 @@ import Services from '@/app/sections/services/Services';
 import Work from '@/app/sections/work/Work';
 import Testimonials from '@/app/sections/testimonials/Testimonials';
 import Footer from '@/app/sections/footer/Footer';
-
-import Light from '@/app/sections/Light';
-import Dark from '@/app/sections/Dark';
-
 // Register the GSAP plugin
 
 const Portfolio = () => {
