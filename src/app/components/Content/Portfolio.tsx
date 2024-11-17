@@ -11,8 +11,7 @@ import Hero from '@/app/sections/hero/Hero';
 import Bento from '@/app/sections/bento/Bento';
 import About from '@/app/sections/about/About';
 import Services from '@/app/sections/services/Services';
-import Work from '@/app/sections/work/Work';
-import Testimonials from '@/app/sections/testimonials/Testimonials';
+import Work from '@/app/sections/work/Work'
 import Footer from '@/app/sections/footer/Footer';
 // Register the GSAP plugin
 
@@ -42,7 +41,6 @@ const Portfolio = () => {
             <About />
             <Services />
             <Work />
-            {/* <Testimonials /> */}
             <Footer />
         </>
     );

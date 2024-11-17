@@ -1,5 +1,5 @@
 import React from 'react'
-import Loader from './components/Loader/Loader'
+// import Loader from './components/Loader/Loader'
 import Portfolio from './components/Content/Portfolio'
 import 'remixicon/fonts/remixicon.css'
 

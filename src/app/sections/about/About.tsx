@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 const About = () => {
   return (
@@ -21,12 +21,12 @@ const About = () => {
         </div>
         <div className="content w-full flex flex-col justify-center gap-4 text-center xl:text-left mt-8 xl:mt-0">
           <p className='text-xl font-normal font-bebas'>( about ME )</p>
-          <h2 className='text-2xl lg:text-7xl font-bebas'>Hi! i'm KARTAVYA JOSHI. I AM 20 YEARS OLD FRONT-END WEB DEVELOPER BASED IN INDIA</h2>
+          <h2 className='text-2xl lg:text-7xl font-bebas'>Hi! I&apos;m KARTAVYA JOSHI. I AM 20 YEARS OLD FRONT-END WEB DEVELOPER BASED IN INDIA</h2>
           <p className='text-sm lg:text-2xl xl:text-2xl font-normal font-nato'>Creating great web experiences is my primary focus. I ensure each project leaves users with a feel-good sensation through meticulous attention to detail and user-centric design principles.</p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

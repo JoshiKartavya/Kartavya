@@ -25,8 +25,8 @@ const Navbar = () => {
           </div>
           <div className="circle xl:w-[400px] xl:h-[400px] w-[200px] h-[200px] rounded-full border-2 border-[--primary] opacity-50 absolute xl:top-[-100px] left-[-50px] xl:left-[-100px] top-[-50px]"></div>
           <div className="links flex flex-col justify-center items-center gap-12">
-            {links.map((e)=>{
-              return <a href={e}>
+            {links.map((e, index)=>{
+              return <a href={e} key={index}>
                 <h1 className='text-3xl xl:text-6xl font-normal font-bebas text-[--primary] tracking-wider'>{e}</h1>
               </a>
             })}
