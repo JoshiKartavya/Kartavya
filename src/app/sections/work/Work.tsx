@@ -93,8 +93,8 @@ const Work = () => {
                 <p>{projects.length}</p>
               </div>
               <div className="btn flex flex-row justify-between items-center gap-4 pb">
-              <Button className="" text="Previous" onClick={handlePrevious} />
-              <Button className="" text="Next" onClick={handleNext} />
+              <Button text="Previous" onClick={handlePrevious} />
+              <Button text="Next" onClick={handleNext} />
               </div>
             </div>
           </div>
