@@ -1,14 +1,33 @@
-import Image from 'next/image'
-import React, { useState } from 'react'
+"use client";
+
+import Image from 'next/image';
+import React, { useState, useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null); // Ref for the menu container
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen((prevState) => !prevState);
+  };
 
-  const links = ["Home", "About Me", "Projects", "Testimonials"]
+  useEffect(() => {
+    if (isMenuOpen) {
+      gsap.from('#menuBar', {
+        opacity: 0,
+        x: '100%'
+      })
+    }
+    else{
+      gsap.to('#menuBar', {
+        opacity: 0,
+        x: '-100%'
+      })
+    }
+  }, [isMenuOpen]);
+
+  const links = ["Home", "About Me", "Projects", "Testimonials"];
 
   return (
     <>
@@ -18,23 +37,27 @@ const Navbar = () => {
           <Image src="/menu2.svg" alt='menu' fill />
         </div>
       </div>
-      {isMenuOpen && (
-        <div className='fixed top-0 left-0 w-[100vw] h-[100vh] bg-[--secondary] z-50 flex justify-center items-center pt-10 pr-8'>
-          <div className="close cursor-pointer absolute top-8 right-8" onClick={toggleMenu}>
-            <i className="ri-close-circle-fill text-5xl text-[--primary]"></i>
-          </div>
-          <div className="circle xl:w-[400px] xl:h-[400px] w-[200px] h-[200px] rounded-full border-2 border-[--primary] opacity-50 absolute xl:top-[-100px] left-[-50px] xl:left-[-100px] top-[-50px]"></div>
-          <div className="links flex flex-col justify-center items-center gap-12">
-            {links.map((e, index)=>{
-              return <a href={e} key={index}>
-                <h1 className='text-3xl xl:text-6xl font-normal font-bebas text-[--primary] tracking-wider'>{e}</h1>
-              </a>
-            })}
-          </div>
+      {/* Menu Overlay */}
+      <div
+        ref={menuRef}
+        id='menuBar'
+        className={`fixed top-0 right-0 w-[100vw] h-[100vh] bg-[--secondary] z-50 flex justify-center items-center pt-10 pr-8 translate-x-full`}
+        style={{ visibility: isMenuOpen ? "visible" : "hidden" }} // Ensure it's hidden initially
+      >
+        <div className="close cursor-pointer absolute top-8 right-8" onClick={toggleMenu}>
+          <i className="ri-close-circle-fill text-5xl text-[--primary]"></i>
         </div>
-      )}
+        <div className="circle xl:w-[400px] xl:h-[400px] w-[200px] h-[200px] rounded-full border-2 border-[--primary] opacity-50 absolute xl:top-[-100px] left-[-50px] xl:left-[-100px] top-[-50px]"></div>
+        <div className="links flex flex-col justify-center items-center gap-12">
+          {links.map((e, index) => (
+            <a href={e} key={index}>
+              <h1 className='text-3xl xl:text-6xl font-normal font-bebas text-[--primary] tracking-wider'>{e}</h1>
+            </a>
+          ))}
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

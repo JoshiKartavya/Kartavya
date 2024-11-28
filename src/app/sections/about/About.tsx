@@ -17,7 +17,7 @@ const About = () => {
       </div>
       <div className="me w-full flex flex-col xl:flex-row py-4 px-6 gap-8">
         <div className="image w-full flex flex-col justify-center items-center">
-          <Image className='rounded-lg' src="/me.jpg" alt='kartavya' width={300} height={210} />
+          <Image className='rounded-lg' src="/me.jpg" alt='kartavya' width={400} height={210} />
         </div>
         <div className="content w-full flex flex-col justify-center gap-4 text-center xl:text-left mt-8 xl:mt-0">
           <p className='text-xl font-normal font-bebas'>( about ME )</p>

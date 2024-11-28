@@ -4,7 +4,7 @@ import Button from '@/app/components/Button/Button'
 const Footer = () => {
   const links = ["Home", "About Me", "Projects", "Testimonials"]
   return (
-    <div className='h-screen w-full flex flex-col justify-center items-center bg-[--primary] text-[--secondary] py-12 px-8 sticky'>
+    <div className='h-screen w-full flex flex-col justify-center items-center bg-[--primary] text-[--secondary] py-12 px-8'>
       <div className="title">
         <h1 className='text-6xl xl:text-9xl font-bebas font-semibold text-center'>Let&apos;s Make Something Great Together!</h1>
       </div>
@@ -28,7 +28,7 @@ const Footer = () => {
         <Button text='Book a call' onClick={() => {}} />
       </div>
       <div className="copyright text-center text-sm xl:text-2xl font-light font-nato tracking-wider">
-        <p>Copyright &copy; {new Date().getFullYear()} All rights reserved by kartavya joshi</p></div>
+        <p>Copyright &copy; {new Date().getFullYear()} All rights reserved by <b>kartavya joshi</b> </p></div>
     </div>
   )
 }
