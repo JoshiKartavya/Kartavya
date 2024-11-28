@@ -7,9 +7,12 @@ import Lenis from '@studio-freight/lenis';
 import "./Portfolio.scss"
 
 // Import your sections
+import Hero from '@/app/sections/hero/Hero';
+import Bento from '@/app/sections/bento/Bento';
+import About from '@/app/sections/about/About';
+import Services from '@/app/sections/services/Services';
+import Work from '@/app/sections/work/Work';
 import Footer from '@/app/sections/footer/Footer';
-import Light from './Light';
-import Dark from './Dark';
 // Register the GSAP plugin
 
 const Portfolio = () => {
@@ -33,8 +36,11 @@ const Portfolio = () => {
 
     return (
         <>
-            <Light />
-            <Dark />
+            <Hero />
+            <Bento />
+            <About />
+            <Services />
+            <Work />
             <Footer />
         </>
     );

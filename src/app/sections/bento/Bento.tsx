@@ -2,8 +2,7 @@ import React from 'react'
 
 const Bento = () => {
   return (
-    <div className="bento hidden xl:block sticky top-0
-    ">
+    <div className="bento hidden xl:block">
       <div className=' h-screen w-full flex flex-col justify-center items-center bg-[--primary] text-[--secondary]'>
         <div className="flex h-full w-full items-center justify-center">
           <div className="grid h-[90%] w-[90%] gap-3 p-2 grid-cols-5 grid-rows-3 rounded-lg">
