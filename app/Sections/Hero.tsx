@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from '../Components';
 import Image from 'next/image';
 import BookCall from '../Components/BookCall';
-import Noise from '../Components/Animations/Noise/Noise';
+// import Noise from '../Components/Animations/Noise/Noise';
 
 const Hero = () => {
   return (

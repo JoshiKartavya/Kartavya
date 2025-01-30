@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect } from 'react';
 import Baffle from '../Components/Baffle';
 import Image from 'next/image';
@@ -39,7 +41,7 @@ const Projects = () => {
     const titleElement = document.querySelector(".proj-title");
     if (titleElement) {
       // Get the text content excluding the span
-      const text = "Presenting some of my selected work that I've done for my happy clients";
+      const text = "Presenting some of my selected work that I&apos;ve done for my happy clients";
       const words = text.split(' ');
       
       // Find the index of "work" to preserve the span
@@ -85,7 +87,7 @@ const Projects = () => {
         <div className="top-data w-full h-full relative flex flex-col justify-start pt-40 xl:pt-60 items-center">
           <Baffle text='&#123; &#125; Selected Works' className=' absolute top-12 left-12 xl:top-36 xl:left-36 text-2xl sm:text-2xl md:text-3xl xl:text-4xl font-light xl:font-normal font-lucidaOblique' />
           <h1 className="proj-title text-3xl sm:text-4xl md:text-6xl xl:text-8xl font-bold w-4/5 xl:w-2/4 font-mono">Presenting some of
-          my selected <span className='text-contrast font-light'>work</span> that I've done for my happy clients</h1>
+          my selected <span className='text-contrast font-light'>work</span> that I&apos;ve done for my happy clients</h1>
         </div>
       </div>
       <div className="projects flex flex-col items-center gap-6 xl:gap-12 w-full relative z-20">

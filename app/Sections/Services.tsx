@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect } from 'react';
 import Baffle from '../Components/Baffle'
 import Image from 'next/image'
@@ -30,7 +32,7 @@ const Services = () => {
   ]
 
   const formatTitle = (title: string) => {
-    return title.split('').map((char, i) => 
+    return title.split('').map((char) => 
       char.toLowerCase() === 'e' || char.toUpperCase() === 'E' 
         ? `<span class="font-thin italic">${char}</span>`
         : char
@@ -97,7 +99,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div key={index} className="service max-h-[58rem] w-full max-w-[40rem] relative cursor-pointer">
                 <div className="service-image w-full h-full relative">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover"></img>
+                  <Image src={service.image} alt={service.title} className="w-full h-full object-cover" fill />
                   <div className="absolute bottom-4 xl:bottom-8 left-4 xl:left-8 bg-opacity-90 px-6 py-4 rounded-lg w-3/5">
                     <h3 className="text-5xl md:text-7xl lg:text-7xl xl:text-7xl font-bold font-geist" dangerouslySetInnerHTML={{__html: formatTitle(service.title)}}></h3>
                   </div>
