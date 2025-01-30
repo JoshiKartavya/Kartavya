@@ -1,16 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 
 const BookCall = () => {
-  const circleTextRef = useRef<SVGTextPathElement>(null);
+  const circleTextRef = useRef<SVGGElement>(null);
 
   useEffect(() => {
     const animate = () => {
       if (circleTextRef.current) {
-        const parent = circleTextRef.current.parentElement;
-        if (parent) {
-          const currentRotation = parseFloat(parent.getAttribute('transform')?.split('rotate(')[1] || '0');
-          parent.setAttribute('transform', `rotate(${(currentRotation + 0.5) % 360})`);
-        }
+        const parent = circleTextRef.current;
+        const currentRotation = parseFloat(parent.getAttribute('transform')?.split('rotate(')[1] || '0');
+        parent.setAttribute('transform', `rotate(${(currentRotation + 0.5) % 360})`);
       }
       requestAnimationFrame(animate);
     };
@@ -30,7 +28,7 @@ const BookCall = () => {
           />
         </defs>
         
-        <g ref={circleTextRef as any}>
+        <g ref={circleTextRef}>
           <text className="text-secondary fill-current text-[0.8rem] sm:text-[0.9rem] md:text-[1rem] xl:text-[1.2rem]">
             <textPath href="#circle" textLength="230">
               BOOK A CALL • BOOK A CALL •
