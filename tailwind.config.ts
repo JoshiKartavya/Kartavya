@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 
 export default {
   content: [
@@ -9,8 +11,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#000000', // Make sure the variable is correctly referenced
+        secondary: '#ffffff',
+        contrast: '#00ff00',
+      },
+      fontFamily: {
+        // Local fonts
+        humaneBold: ['humane-bold', 'sans-serif'],
+        humaneSemiBold: ['humane-semibold', 'sans-serif'],
+        humaneMedium: ['humane-medium', 'sans-serif'],
+        humaneRegular: ['humane-regular', 'sans-serif'],
+        humaneLight: ['humane-light', 'sans-serif'],
+        humaneExtraLight: ['humane-extralight', 'sans-serif'],
+        humaneThin: ['humane-thin', 'sans-serif'],
+        lucidaRegular: ['lucida-regular', 'sans-serif'],
+        lucidaBold: ['lucida-bold', 'sans-serif'],
+        lucidaOblique: ['lucida-oblique', 'sans-serif'],
+        lucidaBoldOblique: ['lucida-bold-oblique', 'sans-serif'],
+        geist: [''],
+        dm_sans: ["DM Sans", 'serif']
       },
     },
   },
