@@ -1,21 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from 'react';
-// Add type declaration for baffle module
-declare module 'baffle' {
-  interface BaffleInstance {
-    start: () => void;
-    reveal: (duration: number) => void;
-    set: (options: { characters: string; speed: number }) => void;
-  }
-
-  interface BaffleFunction {
-    (element: HTMLElement): BaffleInstance;
-  }
-
-  const baffle: BaffleFunction;
-  export default baffle;
-}
-
+import React, { useEffect, useRef } from 'react';
 import baffle from 'baffle';
 
 interface BaffleProps {
@@ -34,13 +18,6 @@ const Baffle: React.FC<BaffleProps> = ({
   characters = '!<>-_\\/[]{}—=+*^?#________'
 }) => {
   const elementRef = useRef<HTMLDivElement>(null);
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    // Initialize audio only on client side
-    setAudio(new Audio('/scifi.mp3'));
-  }, []);
-
   useEffect(() => {
     if (elementRef.current) {
       const target = baffle(elementRef.current);
@@ -49,16 +26,10 @@ const Baffle: React.FC<BaffleProps> = ({
         speed: obfuscationSpeed
       });
 
-      // Play sound when animation starts
-      if (audio) {
-        audio.currentTime = 0;
-        audio.play().catch(err => console.log('Audio playback failed:', err));
-      }
-
       target.start();
       target.reveal(duration);
     }
-  }, [text, duration, obfuscationSpeed, characters, audio]);
+  }, [text, duration, obfuscationSpeed, characters]);
 
   return (
     <div ref={elementRef} className={className}>
