@@ -1,5 +1,5 @@
 import React from 'react'
-import Baffle from '../Components/Baffle'
+// import Baffle from '../Components/Baffle'
 import Image from 'next/image'
 import BookCall from '../Components/BookCall'
 
@@ -7,9 +7,9 @@ const About = () => {
   return (
     <div className='bg-secondary w-full h-max flex flex-col justify-center items-start gap-8 xl:gap-20 xl:py-12'>
       <div className="top">
-        <h1 className="text-left pl-10 xl:pt-0 pt-4 xl:pl-32">
+        {/* <h1 className="text-left pl-10 xl:pt-0 pt-4 xl:pl-32">
           <Baffle text='&#123; &#125; About me' className='text-2xl sm:text-2xl md:text-4xl xl:text-4xl font-medium  font-lucidaOblique' />
-        </h1>
+        </h1> */}
       </div>
       <div className="inner bg-primary text-secondary w-[90%] h-[40rem] sm:h-[40rem] md:h-[50rem] lg:h-[70rem] xl:h-[70rem] mx-auto relative xl:px-20 xl:py-10 flex flex-col justify-center items-center">
         <div className="svgs absolute top-4 sm:top-8 xl:top-12 left-4 sm:left-8 xl:left-12 z-20">

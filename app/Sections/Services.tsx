@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from 'react';
-import Baffle from '../Components/Baffle'
+// import Baffle from '../Components/Baffle'
 import Image from 'next/image'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -85,7 +85,7 @@ const Services = () => {
       <div className='services-main h-max w-full bg-primary text-secondary'>
         <div className="top w-full h-[40vh] md:h-[50vh] xl:h-[90vh] relative z-20">
           <div className="top-data w-full h-full relative flex flex-col justify-start pt-40 xl:pt-60 items-center">
-            <Baffle text='&#123; &#125; Selected Works' className=' absolute top-12 left-12 xl:top-36 xl:left-36 text-2xl sm:text-2xl md:text-3xl xl:text-4xl font-light xl:font-normal font-lucidaOblique' />
+            {/* <Baffle text='&#123; &#125; Selected Works' className=' absolute top-12 left-12 xl:top-36 xl:left-36 text-2xl sm:text-2xl md:text-3xl xl:text-4xl font-light xl:font-normal font-lucidaOblique' /> */}
             <h1 className="ser-title text-4xl sm:text-4xl md:text-6xl xl:text-8xl font-bold w-4/5 xl:w-3/5 opacity-50 font-mono">My services not only helps businesses to grow but to compete from there compitition in the market</h1>
           </div>
         </div>

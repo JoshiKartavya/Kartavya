@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
-import Baffle from './Baffle'
+// import Baffle from './Baffle'
 
 const Navbar = () => {
   return (
@@ -18,9 +18,9 @@ const Navbar = () => {
         </div>
         <div className="main hidden sm:hidden md:hidden lg:hidden xl:block">
         <div className="content h-full flex flex-row lg:gap-[30rem] xl:gap-[30rem]">
-          <div className="text flex flex-col justify-end text-4xl">
+          {/* <div className="text flex flex-col justify-end text-4xl">
             <Baffle text='Enthusiast Coder &lt;/&gt;'  className='text-2xl sm:text-2xl xl:text-4xl font-light xl:font-normal font-lucidaOblique' />
-          </div>
+          </div> */}
           <div className="links flex flex-col text-3xl font-lucidaBold ">
             <Link className=' font-sans text-secondary tracking-widest' href="#">Home</Link>
             <Link className='text-gray-500 tracking-widest' href="#">Projects</Link>

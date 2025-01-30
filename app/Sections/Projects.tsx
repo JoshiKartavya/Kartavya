@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from 'react';
-import Baffle from '../Components/Baffle';
+// import Baffle from '../Components/Baffle';
 import Image from 'next/image';
 import Noise from '../Components/Animations/Noise/Noise';
 import gsap from 'gsap';
@@ -85,7 +85,7 @@ const Projects = () => {
       </div>
       <div className="top w-full h-[40vh] md:h-[50vh] xl:h-[90vh] relative z-20">
         <div className="top-data w-full h-full relative flex flex-col justify-start pt-40 xl:pt-60 items-center">
-          <Baffle text='&#123; &#125; Selected Works' className=' absolute top-12 left-12 xl:top-36 xl:left-36 text-2xl sm:text-2xl md:text-3xl xl:text-4xl font-light xl:font-normal font-lucidaOblique' />
+          {/* <Baffle text='&#123; &#125; Selected Works' className=' absolute top-12 left-12 xl:top-36 xl:left-36 text-2xl sm:text-2xl md:text-3xl xl:text-4xl font-light xl:font-normal font-lucidaOblique' /> */}
           <h1 className="proj-title text-3xl sm:text-4xl md:text-6xl xl:text-8xl font-bold w-4/5 xl:w-2/4 font-mono">Presenting some of
           my selected <span className='text-contrast font-light'>work</span> that I&apos;ve done for my happy clients</h1>
         </div>
