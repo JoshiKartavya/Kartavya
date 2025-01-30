@@ -1,5 +1,21 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
+// Add type declaration for baffle module
+declare module 'baffle' {
+  interface BaffleInstance {
+    start: () => void;
+    reveal: (duration: number) => void;
+    set: (options: { characters: string; speed: number }) => void;
+  }
+
+  interface BaffleFunction {
+    (element: HTMLElement): BaffleInstance;
+  }
+
+  const baffle: BaffleFunction;
+  export default baffle;
+}
+
 import baffle from 'baffle';
 
 interface BaffleProps {
