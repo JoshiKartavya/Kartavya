@@ -1,6 +1,6 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
-import baffle from 'baffle';
+import React from 'react';
+import BaffleReact from 'baffle-react';
 
 interface BaffleProps {
   text: string;
@@ -17,24 +17,15 @@ const Baffle: React.FC<BaffleProps> = ({
   obfuscationSpeed = 50,
   characters = '!<>-_\\/[]{}—=+*^?#________'
 }) => {
-  const elementRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (elementRef.current) {
-      const target = baffle(elementRef.current);
-      target.set({
-        characters: characters,
-        speed: obfuscationSpeed
-      });
-
-      target.start();
-      target.reveal(duration);
-    }
-  }, [text, duration, obfuscationSpeed, characters]);
-
   return (
-    <div ref={elementRef} className={className}>
-      {text}
-    </div>
+    <BaffleReact
+      text={text}
+      className={className}
+      revealDuration={duration}
+      revealDelay={0}
+      characters={characters}
+      speed={obfuscationSpeed}
+    />
   );
 };
 
