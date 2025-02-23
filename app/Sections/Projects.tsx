@@ -1,14 +1,20 @@
 "use client"
 
 import React, { useEffect } from 'react';
-// import Baffle from '../Components/Baffle';
 import Image from 'next/image';
 import Noise from '../Components/Animations/Noise/Noise';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
+interface Project {
+  id: number;
+  preview: string;
+  title: string;
+  description: string;
+}
+
 const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       preview: '/proj1.png',
@@ -56,7 +62,7 @@ const Projects = () => {
       }).join('');
       
       // Animate all spans including the "work" span
-      const spans = document.querySelectorAll(".proj-title span");
+      const spans = titleElement.querySelectorAll("span");
       spans.forEach((span, index) => {
         gsap.to(span, {
           opacity: 1,
@@ -85,17 +91,23 @@ const Projects = () => {
       </div>
       <div className="top w-full h-[40vh] md:h-[50vh] xl:h-[90vh] relative z-20">
         <div className="top-data w-full h-full relative flex flex-col justify-start pt-40 xl:pt-60 items-center">
-          {/* <Baffle text='&#123; &#125; Selected Works' className=' absolute top-12 left-12 xl:top-36 xl:left-36 text-2xl sm:text-2xl md:text-3xl xl:text-4xl font-light xl:font-normal font-lucidaOblique' /> */}
           <h1 className="proj-title text-3xl sm:text-4xl md:text-6xl xl:text-8xl font-bold w-4/5 xl:w-2/4 font-mono">Presenting some of
           my selected <span className='text-contrast font-light'>work</span> that I&apos;ve done for my happy clients</h1>
         </div>
       </div>
       <div className="projects flex flex-col items-center gap-6 xl:gap-12 w-full relative z-20">
         {projects.map((project) => (
-          <div key={project.id} className="project w-[90%] h-[26rem]  md:h-[40rem] lg:h-[60rem] xl:h-[90rem] flex flex-col gap-8 justify-between items-start pb-4 xl:pb-12 cursor-pointer">
-            <div className="preview w-full h-full">
+          <div key={project.id} className="project w-[90%] flex flex-col gap-8 justify-between items-start pb-4 xl:pb-12 cursor-pointer">
+            <div className="preview w-full aspect-[541/304]">
               <div className="img relative w-full h-full">
-                <Image src={project.preview} alt={project.title} fill />
+                <Image 
+                  src={project.preview} 
+                  alt={project.title} 
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
+                  priority={project.id === 1}
+                  className="object-cover"
+                />
               </div>
             </div>
             <div className="project-info flex flex-col gap-4 w-full">

@@ -1,6 +1,4 @@
 import type { Config } from "tailwindcss";
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
 
 export default {
   content: [
@@ -10,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': { 'min': '1920px' }, 
+      },
       colors: {
         primary: '#000000', // Make sure the variable is correctly referenced
         secondary: '#ffffff',

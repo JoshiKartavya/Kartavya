@@ -4,10 +4,13 @@ import React, { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import { About, Footer, Hero, Projects, Services } from './Sections';
 
-interface CSSStyleDeclaration {
-  msOverflowStyle: string;
-  scrollbarWidth: string;
-  WebkitOverflowScrolling: string;
+// Extend the built-in CSSStyleDeclaration type
+declare global {
+  interface CSSStyleDeclaration {
+    msOverflowStyle: string;
+    scrollbarWidth: string;
+    WebkitOverflowScrolling: string;
+  }
 }
 
 const Page = () => {
@@ -29,9 +32,9 @@ const Page = () => {
 
     // Hide scrollbar
     document.body.style.overflow = 'hidden';
-    (document.body.style as CSSStyleDeclaration).msOverflowStyle = 'none'; // IE and Edge
-    (document.body.style as CSSStyleDeclaration).scrollbarWidth = 'none'; // Firefox
-    (document.body.style as CSSStyleDeclaration).WebkitOverflowScrolling = 'touch';
+    document.body.style.msOverflowStyle = 'none'; // IE and Edge
+    document.body.style.scrollbarWidth = 'none'; // Firefox
+    document.body.style.WebkitOverflowScrolling = 'touch';
     
     // Add CSS to hide webkit scrollbar
     const style = document.createElement('style');
@@ -46,9 +49,9 @@ const Page = () => {
     return () => {
       lenis.destroy();
       document.body.style.overflow = '';
-      (document.body.style as CSSStyleDeclaration).msOverflowStyle = '';
-      (document.body.style as CSSStyleDeclaration).scrollbarWidth = '';
-      (document.body.style as CSSStyleDeclaration).WebkitOverflowScrolling = '';
+      document.body.style.msOverflowStyle = '';
+      document.body.style.scrollbarWidth = '';
+      document.body.style.WebkitOverflowScrolling = '';
       document.head.removeChild(style);
     };
   }, []);
