@@ -3,6 +3,7 @@
 import React from 'react';
 import { Copyright } from '../Components';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -32,10 +33,10 @@ const Footer = () => {
             <div className="links flex flex-row xl:flex-row gap-6 xl:gap-10 mt-8 xl:mt-0">
               <div className="link flex flex-col items-start gap-3 xl:gap-6">
                 <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-geist font-medium'>Quick links</h1>
-                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/">Home</a>
-                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/projects">Projects</a>
-                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/services">Services</a>
-                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/about">About</a>
+                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/">Home</Link>
+                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/projects">Projects</Link>
+                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/services">Services</Link>
+                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/about">About</Link>
               </div>
               <div className="socials flex flex-col items-start gap-3 xl:gap-6">
                 <h1 className='text-2xl sm:text-3xl xl:text-5xl font-medium'>Connect with Me</h1>
