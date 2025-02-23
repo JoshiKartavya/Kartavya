@@ -89,7 +89,7 @@ const Projects = () => {
           patternAlpha={15}
         />
       </div>
-      <div className="top w-full h-[40vh] md:h-[50vh] xl:h-[90vh] relative z-20">
+      <div className="top w-full h-[40vh] md:h-[50vh] xl:h-[90vh] relative z-20 mb-12 xl:mb-0 2xl:mb-0">
         <div className="top-data w-full h-full relative flex flex-col justify-start pt-40 xl:pt-60 items-center">
           <h1 className="proj-title text-3xl sm:text-4xl md:text-6xl xl:text-8xl font-bold w-4/5 xl:w-2/4 font-mono">Presenting some of
           my selected <span className='text-contrast font-light'>work</span> that I&apos;ve done for my happy clients</h1>

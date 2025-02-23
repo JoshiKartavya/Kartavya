@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { Copyright } from '../Components';
 import Image from 'next/image';

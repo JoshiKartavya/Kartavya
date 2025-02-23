@@ -1,22 +1,13 @@
+"use client"
+
 import React from 'react';
 import { Navbar } from '../Components';
 import Image from 'next/image';
-// import BookCall from '../Components/BookCall';
-// import Noise from '../Components/Animations/Noise/Noise';
 
 const Hero = () => {
   return (
     <>
       <div className="w-full h-max bg-primary text-secondary relative overflow-hidden">
-        {/* <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <Noise
-            patternSize={300}
-            patternScaleX={3}
-            patternScaleY={3}
-            patternRefreshInterval={2}
-            patternAlpha={15}
-          />
-        </div> */}
         <Navbar />
         <div className="z-10 relative xl:pl-40 h-max xl:h-screen 2xl:h-screen 3xl:h-screen">
           <div className="hero flex flex-col xl:flex-row justify-between">
@@ -30,7 +21,6 @@ const Hero = () => {
                 <Image src="/KbFull.png" alt='keyboard' fill className="object-contain" />
               </div>
               <div className="data xl:mt-8 xl:absolute xl:top-[65%] xl:left-0 2xl:left-[60%] 2xl:top-[55%] 3xl:left-[60%] 3xl:top-[55%] flex flex-col xl:flex-row items-center gap-12">
-                {/* <BookCall /> */}
                 <p className='w-[85%] text-center xl:w-[80%] mt-8 xl:mt-0 text-2xl xl:text-3xl'>Hi, I am India Based Web Developer and Designer who help brands and freelancers to grow their dreams and stand them out than other companies </p>
               </div>
             </div>
