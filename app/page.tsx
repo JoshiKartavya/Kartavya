@@ -8,7 +8,7 @@ import { About, Footer, Hero, Projects, Services } from "./Sections";
 declare global {
   interface CSSStyleDeclaration {
     msOverflowStyle?: string;
-    scrollbarWidth?: string;
+    scrollbarWidth: string;
     WebkitOverflowScrolling?: string;
   }
 }
@@ -20,7 +20,7 @@ const Page = () => {
       duration: 1.2, // Smoothness duration
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing function
       smoothWheel: true,
-      smoothTouch: true, // Fix for mobile scrolling
+      // smoothTouch: true, // Fix for mobile scrolling
     });
 
     // Animation Frame for Lenis
