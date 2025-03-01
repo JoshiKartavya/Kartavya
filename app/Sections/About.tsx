@@ -17,9 +17,9 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="content flex flex-col gap-4 xl:gap-12 w-full xl:px-0 px-6 md:px-10 lg:px-12 xl:w-[65%] justify-center items-center">
+        <div className="content flex flex-col gap-4 xl:gap-12 w-full xl:px-0 px-6 md:px-10 lg:px-12 xl:w-[60%] justify-center items-center">
           <h1 className='font-sans text-3xl sm:text-5xl lg:text-6xl xl:text-7xl'>Hi! I&apos;m <span className='font-bold'>Kartavya Joshi.</span> I am <br /> 20 years old <span className='text-contrast'>front-end web <br /> developer</span> based in India</h1>
-          <p className='font-sans text-lg sm:text-3xl xl:text-4xl text-secondary opacity-70'>Creating great web experiences is my primary focus. I ensure each project leaves users with a feel-good sensation through meticulous attention to detail and user-centric design principles.</p>
+          <p className='font-lucidaBold text-lg sm:text-3xl xl:text-4xl text-secondary opacity-70'>Creating great web experiences is my primary focus. I ensure each project leaves users with a feel-good sensation through meticulous attention to detail and user-centric design principles.</p>
         </div>
       </div>
     </div>

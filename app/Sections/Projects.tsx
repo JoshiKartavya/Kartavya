@@ -17,26 +17,26 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      preview: '/proj1.png',
+      preview: '/anthrope-mock.webp',
       title: 'Anthrope - London',
       description: 'This project is a website design I done for London based start-up which was a fun as well as learning based project its my personal fav.',
     },
     {
       id: 2,
       preview: '/proj2.png',
-      title: ' * Project 2', 
+      title: 'Web-3 NFT Marketplace', 
       description: 'This is a description of project 2.',
     },
     {
       id: 3,
       preview: '/proj3.png',
-      title: 'Project 3',
+      title: 'Clear Consent LOGO',
       description: 'This is a description of project 3.',
     },
     {
       id: 4,
-      preview: '/proj1.png',
-      title: 'Project 4',
+      preview: '/3d-mock.webp',
+      title: '3D futuristic helmet',
       description: 'This is a description of project 4.',
     },
   ]
@@ -91,7 +91,7 @@ const Projects = () => {
       </div>
       <div className="top w-full h-[40vh] md:h-[50vh] xl:h-[90vh] relative z-20 mb-12 xl:mb-0 2xl:mb-0">
         <div className="top-data w-full h-full relative flex flex-col justify-start pt-40 xl:pt-60 items-center">
-          <h1 className="proj-title text-3xl sm:text-4xl md:text-6xl xl:text-8xl font-bold w-4/5 xl:w-2/4 font-mono">Presenting some of
+          <h1 className="proj-title text-3xl sm:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold w-4/5 xl:w-2/4 font-mono">Presenting some of
           my selected <span className='text-contrast font-light'>work</span> that I&apos;ve done for my happy clients</h1>
         </div>
       </div>
@@ -106,13 +106,13 @@ const Projects = () => {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
                   priority={project.id === 1}
-                  className="object-cover"
+                  className="object-cover rounded-lg"
                 />
               </div>
             </div>
             <div className="project-info flex flex-col gap-4 w-full">
               <h2 className="text-2xl sm:text-3xl xl:text-5xl font-lucidaBold">{project.title}</h2>
-              <p className="text-base sm:text-lg xl:text-2xl w-full xl:w-2/4 font-mono font-medium">{project.description}</p>
+              {/* <p className="text-base sm:text-lg xl:text-2xl w-full xl:w-2/4 font-mono font-medium">{project.description}</p> */}
             </div>
           </div>
         ))}

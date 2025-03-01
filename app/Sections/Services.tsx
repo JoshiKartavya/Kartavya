@@ -69,7 +69,7 @@ const Services = () => {
             <Image src="/arrow.svg" alt="arrow" fill />
           </div>
         </div>
-        <div className="services h-max w-full xl:w-2/3 grid grid-cols-1 xl:grid-cols-2 gap-6 px-4 py-8 place-items-center">
+        <div className="services h-max w-full xl:w-2/3 grid grid-cols-2 xl:grid-cols-2 gap-6 px-4 py-8 place-items-center">
           {services.map((service) => (
             <div
               key={service.id}
@@ -84,7 +84,7 @@ const Services = () => {
                   priority
                 />
                 <div className="absolute bottom-3 left-3 px-3 py-2 rounded-lg w-4/5">
-                  <h3 className="text-5xl font-bold font-geist">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-6xl 2xl:text-7xl font-bold font-geist">
                     {formatTitle(service.title)}
                   </h3>
                 </div>
