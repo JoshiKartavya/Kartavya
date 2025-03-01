@@ -31,13 +31,13 @@ const Projects = () => {
       id: 3,
       preview: '/proj3.png',
       title: 'Clear Consent LOGO',
-      description: 'This is a description of project 3.',
+      description: 'Designed a professional logo for "CLEAR CONSENT," a cybersecurity-focused company, ensuring a modern and secure brand identity.',
     },
     {
       id: 4,
       preview: '/3d-mock.webp',
       title: '3D futuristic helmet',
-      description: 'This is a description of project 4.',
+      description: 'Developed an immersive 3D website using Three.js and post-processing effects, showcasing a futuristic helmet with realistic lighting and interactivity.',
     },
   ]
 
