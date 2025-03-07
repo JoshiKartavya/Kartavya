@@ -2,14 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { Lucida_Sans } from 'next/font/local';
 import Noise from "../Components/Animations/Noise/Noise";
 import projects from "../Data";
-
-const lucida = Lucida_Sans({
-  src: '../fonts/LucidaSans-Bold.woff2',
-  variable: '--font-lucida'
-});
 
 const Projects = () => {
   return (
