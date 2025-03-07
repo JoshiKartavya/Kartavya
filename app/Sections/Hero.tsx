@@ -21,7 +21,7 @@ const Hero = () => {
                 <Image src="/KbFull.png" alt='keyboard' fill className="object-contain" />
               </div>
               <div className="data xl:mt-8 xl:absolute xl:top-[50%] xl:left-[16%] 2xl:left-[60%] 2xl:top-[55%] 3xl:left-[60%] 3xl:top-[55%] flex flex-col xl:flex-row items-center gap-12">
-                <p className='w-[85%] text-center xl:w-[80%] mt-8 xl:mt-0 text-2xl xl:text-3xl'>Hi, I am India Based Web Developer and Designer who help brands and freelancers to grow their dreams and stand them out than other companies </p>
+                <p className='w-[85%] text-center xl:w-[80%] mt-8 xl:mt-0 text-2xl xl:text-3xl'>Hi, I am Indian Web Developer and Designer who helps brands and freelancers to grow their dreams and stand out </p>
               </div>
             </div>
             {/* Adjusting the image size for xl screens */}
