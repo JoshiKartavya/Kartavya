@@ -123,18 +123,21 @@ const VelocityText: React.FC<VelocityTextProps> = ({
     baseX.set(baseX.get() + moveBy);
   });
 
-  const spans = [];
-  for (let i = 0; i < numCopies!; i++) {
-    spans.push(
-      <span
-        className={`flex-shrink-0 ${className}`}
-        key={i}
-        ref={i === 0 ? copyRef : null}
-      >
-        {children}
-      </span>
-    );
-  }
+  const renderSpans = () => {
+    const spans = [];
+    for (let i = 0; i < numCopies!; i++) {
+      spans.push(
+        <span
+          className={`flex-shrink-0 ${className}`}
+          key={i}
+          ref={i === 0 ? copyRef : null}
+        >
+          {children}
+        </span>
+      );
+    }
+    return spans;
+  };
 
   return (
     <div
@@ -145,7 +148,7 @@ const VelocityText: React.FC<VelocityTextProps> = ({
         className={`${scrollerClassName} flex whitespace-nowrap text-center font-sans text-4xl font-bold tracking-[-0.02em] drop-shadow md:text-[5rem] md:leading-[5rem]`}
         style={{ x, ...scrollerStyle }}
       >
-        {spans}
+        {renderSpans()}
       </motion.div>
     </div>
   );
