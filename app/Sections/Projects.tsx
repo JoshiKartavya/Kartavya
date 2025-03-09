@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Noise from "../Components/Animations/Noise/Noise";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import projects from "../Data";
 
 const Projects = () => {
