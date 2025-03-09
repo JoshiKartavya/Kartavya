@@ -1,52 +1,97 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import Lenis from "@studio-freight/lenis";
-import { About, Footer, Hero, Projects, Services } from "./Sections";
-
-// Extend the built-in CSSStyleDeclaration type
-declare global {
-  interface CSSStyleDeclaration {
-    msOverflowStyle?: string;
-    scrollbarWidth: string;
-    WebkitOverflowScrolling?: string;
-  }
-}
+import { About, Footer, Hero, Services } from "./Sections";
+import Projects from "./Sections/projects/page";
+import "remixicon/fonts/remixicon.css";
+import ScrollVelocity from "./Components/ScrollValocity";
 
 const Page = () => {
-  useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis({
-      duration: 1.2, // Smoothness duration
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing function
-      smoothWheel: true,
-      // smoothTouch: true, // Fix for mobile scrolling
-    });
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const velocity = 100; // Define velocity here
 
-    // Animation Frame for Lenis
+  useEffect(() => {
+    // Initialize Lenis for smooth scrolling
+    const lenis = new Lenis();
     const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };
-
     requestAnimationFrame(raf);
 
-    // ✅ **Fix: Allow scrolling on all devices**
-    document.body.style.overflow = "auto"; // Change 'hidden' to 'auto'
-    document.documentElement.style.overflow = "auto"; // Ensure smooth scrolling on mobile
+    // Hide default cursor
+    document.body.style.cursor = "none";
 
-    // Cleanup on unmount
+    // GSAP Cursor Follow Effect
+    const moveCursor = (e: MouseEvent) => {
+      gsap.to(cursorRef.current, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.1,
+        ease: "power2.out",
+      });
+    };
+
+    window.addEventListener("mousemove", moveCursor);
+
+    // Detect background and change cursor color
+    const sections = document.querySelectorAll("section"); // Assuming sections are used
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const bgColor = window.getComputedStyle(entry.target).backgroundColor;
+            const isDark = isDarkColor(bgColor);
+            if (cursorRef.current) {
+              cursorRef.current.style.backgroundColor = isDark ? "white" : "black";
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
     return () => {
-      lenis.destroy();
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
+      window.removeEventListener("mousemove", moveCursor);
+      observer.disconnect();
     };
   }, []);
 
+    // Function to check if a color is dark or light
+    const isDarkColor = (bgColor: string) => {
+      if (!bgColor || !bgColor.startsWith("rgb")) return true;
+      const rgb = bgColor.match(/\d+/g)?.map(Number);
+      if (!rgb) return true;
+      const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+      return brightness < 128; // If brightness is low, consider it dark
+    };
+
   return (
-    <div>
+    <div className="relative cursor-none">
+      {/* Custom Cursor */}
+      <div
+        ref={cursorRef}
+        className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none z-50 mix-blend-difference"
+        style={{ backgroundColor: "white" }} // Default color
+      />
+
+      {/* Page Sections */}
       <Hero />
+      <ScrollVelocity
+        texts={['Web Developer']}
+        velocity={velocity} // Now it's properly defined
+        className="custom-scroll-text "
+      />
       <Projects />
+      <ScrollVelocity
+        texts={['UI/UX Designer']}
+        velocity={velocity} // Now it's properly defined
+        className="custom-scroll-text "
+      />
       <Services />
       <About />
       <Footer />

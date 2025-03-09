@@ -23,9 +23,9 @@ const Navbar = () => {
           </div> */}
           <div className="links flex flex-col text-3xl font-lucidaBold ">
             <Link className=' font-sans text-secondary tracking-widest' href="#">Home</Link>
-            <Link className='text-gray-500 tracking-widest hover:text-secondary' href="#">Projects</Link>
-            <Link className='text-gray-500 tracking-widest hover:text-secondary' href="#">About</Link>
-            <Link className='text-gray-500 tracking-widest hover:text-secondary' href="#">Services</Link>
+            <Link className='text-gray-500 tracking-widest hover:text-secondary' href="#Projects">Projects</Link>
+            <Link className='text-gray-500 tracking-widest hover:text-secondary' href="#About">About</Link>
+            <Link className='text-gray-500 tracking-widest hover:text-secondary' href="#Experties">Experties</Link>
           </div>
         </div>
         </div>

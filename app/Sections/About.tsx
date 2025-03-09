@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <div className='bg-secondary w-full h-max flex flex-col justify-center items-start gap-8 xl:gap-20 xl:py-12'>
+    <div id='About' className='bg-secondary w-full h-max flex flex-col justify-center items-start gap-8 xl:gap-20 xl:py-12'>
       <div className="inner bg-primary text-secondary w-[90%] h-[40rem] sm:h-[40rem] md:h-[50rem] lg:h-[70rem] xl:h-[60rem] mt-12 xl:mt-0 2xl:mt-0 mx-auto relative xl:px-20 xl:py-10 flex flex-col justify-center items-center">
         <div className="svgs absolute top-4 sm:top-8 xl:top-12 left-4 sm:left-8 xl:left-12 z-20">
           <div className="bulbs relative w-[8rem] h-[3rem] sm:w-[10rem] sm:h-[3.5rem] xl:w-[20rem] xl:h-[7rem]">

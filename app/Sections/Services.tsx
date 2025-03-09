@@ -47,7 +47,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="services-main h-max w-full bg-primary text-secondary">
+    <div id="Experties" className="services-main h-max w-full bg-primary text-secondary">
       <div className="top w-full h-max md:h-max xl:h-[90vh] relative z-20">
         <div className="top-data w-full h-full relative flex flex-col justify-start pt-20 xl:pt-60 items-center">
           <h1 className="ser-title text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold w-4/5 xl:w-4/5 font-mono">
@@ -55,7 +55,7 @@ const Services = () => {
             <span className="text-contrast font-thin opacity-50">
               businesses
             </span>{" "}
-            grow and also compete with their{" "}
+            to grow and also compete with their{" "}
             <span className="text-contrast font-thin opacity-50">
               competition
             </span>{" "}
