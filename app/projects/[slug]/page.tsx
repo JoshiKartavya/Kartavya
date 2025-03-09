@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useParams, } from "next/navigation";
 import projects from "@/app/Data";
 import Image from "next/image";
@@ -12,18 +12,16 @@ const ProjectPage = () => {
   const project = projects.find((p) => p.slug === slug);
   const cursorRef = useRef<HTMLDivElement>(null);
 
-  if (!project) {
-    return <h1 className="text-center text-2xl">Project not found</h1>;
-  }
-
   useEffect(() => {
+    if (!project) return;
+
     // Initialize Lenis for smooth scrolling
-        const lenis = new Lenis();
-        const raf = (time: number) => {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        };
-        requestAnimationFrame(raf);
+    const lenis = new Lenis();
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
 
     // Hide default cursor
     document.body.style.cursor = "none";
@@ -63,7 +61,7 @@ const ProjectPage = () => {
       window.removeEventListener("mousemove", moveCursor);
       observer.disconnect();
     };
-  }, []);
+  }, [project]);
 
   // Function to check if a color is dark or light
   const isDarkColor = (bgColor: string) => {
@@ -73,6 +71,10 @@ const ProjectPage = () => {
     const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
     return brightness < 128; // If brightness is low, consider it dark
   };
+
+  if (!project) {
+    return <h1 className="text-center text-2xl">Project not found</h1>;
+  }
 
   return (
   <>
