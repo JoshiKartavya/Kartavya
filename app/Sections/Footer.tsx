@@ -34,9 +34,9 @@ const Footer = () => {
               <div className="link flex flex-col items-start gap-3 xl:gap-6">
                 <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-geist font-medium'>Quick links</h1>
                 <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/">Home</Link>
-                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/projects">Projects</Link>
-                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/services">Services</Link>
-                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/about">About</Link>
+                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/">Projects</Link>
+                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/">Expertise</Link>
+                <Link className='text-xl sm:text-2xl xl:text-4xl font-regular' href="/">About</Link>
               </div>
               <div className="socials flex flex-col items-start gap-3 xl:gap-6">
                 <h1 className='text-2xl sm:text-3xl xl:text-5xl font-medium'>Connect with Me</h1>
