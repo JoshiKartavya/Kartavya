@@ -1,11 +1,48 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Noise from "../Components/Animations/Noise/Noise";
 import projects from "../Data";
 
 const Projects = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const titleElement = document.querySelector(".proj-title");
+    if (titleElement) {
+      // Get the text content excluding the span
+      const text = "Presenting some of my selected work that I&apos;ve done for my happy clients";
+      const words = text.split(' ');
+      
+      // Find the index of "work" to preserve the span
+      const workIndex = words.indexOf('work');
+      
+      // Map through words and wrap each in span
+      titleElement.innerHTML = words.map((word, index) => {
+        if (index === workIndex) {
+          return `<span class="text-contrast font-light" style="opacity: 0.3">${word} </span>`;
+        }
+        return `<span style="opacity: 0.3">${word} </span>`;
+      }).join('');
+      
+      // Animate all spans including the "work" span
+      const spans = titleElement.querySelectorAll("span");
+      spans.forEach((span, index) => {
+        gsap.to(span, {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".projects-main",
+            start: `top ${40 - (index * 5)}%`,
+            end: `top ${30 - (index * 5)}%`,
+            scrub: true,
+            toggleActions: "play reverse play reverse"
+          }
+        });
+      });
+    }
+  }, []);
+  
   return (
     <div className="projects-main flex flex-col justify-center items-start bg-black text-white relative min-h-screen pb-12">
       <div className="fixed inset-0 w-full h-full pointer-events-none z-10">
