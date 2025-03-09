@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Noise from "../Components/Animations/Noise/Noise";
+import gsap from "gsap";
 import projects from "../Data";
 
 const Projects = () => {
@@ -42,7 +43,7 @@ const Projects = () => {
       });
     }
   }, []);
-  
+
   return (
     <div className="projects-main flex flex-col justify-center items-start bg-black text-white relative min-h-screen pb-12">
       <div className="fixed inset-0 w-full h-full pointer-events-none z-10">
