@@ -8,7 +8,7 @@ const projects = [
         tech: ["React", "Next.js", "Tailwind CSS", "Sanity.io"],
         link: "https://anthrope-london.vercel.app/",
         date: "2021-09-01",
-        price: '1000'
+        price: '850'
     },
     {
         _id: "2",
@@ -16,10 +16,10 @@ const projects = [
         preview: "/3d-mock.webp",
         title: "3D Helmet",
         description: "This is the second project",
-        tech: ["React", "Next.js", "Tailwind CSS", "Sanity.io"],
-        link: "https://github.com",
+        tech: ["React", "Tailwind CSS", "Three.js" ,"React Three Fiber"],
+        link: "https://cyberpunk-2077-one.vercel.app/",
         date: "2021-09-01",
-        price: '1000'
+        price: '1199'
     },
     {
         _id: "3",
@@ -27,10 +27,10 @@ const projects = [
         preview: "/amul-mock.webp",
         title: "Amul Website",
         description: "This is the third project",
-        tech: ["React", "Next.js", "Tailwind CSS", "Sanity.io"],
-        link: "https://github.com",
+        tech: ["HTML", "Javascript", "Tailwind CSS", "GSAP", "ScrollTrigger"],
+        link: "https://amul-clone.netlify.app/",
         date: "2021-09-01",
-        price: '1000'
+        price: '1500'
     },
     // {
     //     _id: "4",
