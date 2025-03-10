@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Lenis from "@studio-freight/lenis";
 import { About, Footer, Hero, Services } from "./Sections";
@@ -10,9 +10,13 @@ import ScrollVelocity from "./Components/ScrollValocity";
 
 const Page = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
-  const velocity = 100; // Define velocity here
+  const velocity = 100;
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Set initial mobile state
+    setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+
     // Disable text selection, copy and right click
     const disableCopy = (e: Event) => e.preventDefault();
     const disableContextMenu = (e: MouseEvent) => e.preventDefault();
@@ -33,9 +37,6 @@ const Page = () => {
     };
     requestAnimationFrame(raf);
 
-    // Only enable custom cursor for desktop/larger screens
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-    
     if (!isMobile) {
       // Hide default cursor
       document.body.style.cursor = "none";
@@ -67,15 +68,15 @@ const Page = () => {
       document.removeEventListener("contextmenu", disableContextMenu);
       document.removeEventListener("mousedown", disableRightClick);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
-    <div className="relative select-none" style={{ cursor: window.matchMedia("(max-width: 768px)").matches ? 'auto' : 'none' }}>
+    <div className="relative select-none" style={{ cursor: isMobile ? 'auto' : 'none' }}>
       {/* Custom Cursor */}
       <div
         ref={cursorRef}
         className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none z-50 mix-blend-difference hidden md:block"
-        style={{ backgroundColor: "white" }} // Default color
+        style={{ backgroundColor: "white" }}
       />
 
       {/* Page Sections */}
