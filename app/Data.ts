@@ -58,17 +58,18 @@ const projects = [
         date: "2021-09-01",
         price: '1500'
     },
-    
-    // {
-    //     _id: "5",
-    //     slug: "project-5",
-    //     preview: "/images/projects/5.jpg",
-    //     title: "Project 5",
-    //     description: "This is the fifth project",
-    //     tech: ["React", "Next.js", "Tailwind CSS", "Sanity.io"],
-    //     link: "https://github.com",
-    //     date: "2021-09-01",
-    // }
+    {
+        _id: "5",
+        slug: "winmark",
+        preview: "/winmark.webp",
+        title: "Winmark Corporation – Powering Innovation, Ensuring Reliability",
+        description: "Winmark Corporation is your trusted partner for all electrical services, from installations and maintenance to repairs and advanced electrical solutions. With a commitment to safety, efficiency, and innovation, we deliver high-quality electrical work for residential, commercial, and industrial projects. Whether it’s wiring, panel upgrades, lighting solutions, or custom electrical designs, our expert team ensures seamless execution and long-lasting performance. Choose Winmark Corporation for reliable, future-ready electrical solutions that power your world.",
+        client: "SanjayBhai Parmar",
+        tech: ["Next.js", "Typescript", "Tailwind CSS"],
+        // link: "https://amul-clone.netlify.app/",
+        date: "2024-09-01",
+        price: '600'
+    },
 ]
 
 export default projects;

@@ -41,6 +41,12 @@ const ProjectPage: React.FC = () => {
       window.addEventListener("mousemove", moveCursor);
       return () => window.removeEventListener("mousemove", moveCursor);
     }
+
+    // Cleanup function
+    return () => {
+      lenis.destroy();
+      window.scrollTo(0, 0); // Ensure scroll position is reset when unmounting
+    };
   }, [project]);
 
   if (!project) {
