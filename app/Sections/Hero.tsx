@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Hero = () => {
   return (
     <>
-      <div className="w-full h-max bg-primary text-secondary relative overflow-hidden">
+      <div className="w-full h-max bg-primary text-secondary relative overflow-hidden pb-8">
         <Navbar />
         <div className="z-10 relative xl:pl-40 h-max xl:h-screen 2xl:h-screen 3xl:h-screen">
           <div className="hero flex flex-col xl:flex-row justify-between">
