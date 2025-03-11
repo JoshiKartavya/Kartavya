@@ -1,4 +1,4 @@
-interface Project {
+const projects: {
     _id: string;
     slug: string;
     preview: string;
@@ -9,9 +9,7 @@ interface Project {
     price: string;
     tech?: string[]; // Optional
     link?: string; // Optional
-}
-
-const projects = [
+}[] = [
     {
         _id: "1",
         slug: "anthrope-london",
@@ -63,7 +61,7 @@ const projects = [
         slug: "winmark",
         preview: "/winmark.webp",
         title: "Winmark Corporation – Powering Innovation, Ensuring Reliability",
-        description: "Winmark Corporation is your trusted partner for all electrical services, from installations and maintenance to repairs and advanced electrical solutions. With a commitment to safety, efficiency, and innovation, we deliver high-quality electrical work for residential, commercial, and industrial projects. Whether it’s wiring, panel upgrades, lighting solutions, or custom electrical designs, our expert team ensures seamless execution and long-lasting performance. Choose Winmark Corporation for reliable, future-ready electrical solutions that power your world.",
+        description: "Winmark Corporation is your trusted partner for all electrical services, from installations and maintenance to repairs and advanced electrical solutions. With a commitment to safety, efficiency, and innovation, we deliver high-quality electrical work for residential, commercial, and industrial projects. Whether it's wiring, panel upgrades, lighting solutions, or custom electrical designs, our expert team ensures seamless execution and long-lasting performance. Choose Winmark Corporation for reliable, future-ready electrical solutions that power your world.",
         client: "SanjayBhai Parmar",
         tech: ["Next.js", "Typescript", "Tailwind CSS"],
         // link: "https://amul-clone.netlify.app/",
