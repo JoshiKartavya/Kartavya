@@ -17,9 +17,9 @@ const projects: {
         title: "Anthrope London Restaurant & Hotel Website",
         description: "Anthrope is a premium restaurant that redefines fine dining with an exquisite fusion of flavors, world-class service, and an ambiance of timeless elegance. Complementing its culinary mastery, Anthrope also offers luxurious 5-star hotels, providing guests with an unparalleled experience of sophistication, comfort, and hospitality. Whether indulging in a gourmet feast or unwinding in opulent accommodations, Anthrope promises an unforgettable journey of taste and luxury.",
         client: "Anthrope London",
-        tech: ["React", "Next.js", "Tailwind CSS", "Sanity.io"],
+        tech: ["React", "Next.js", "Tailwind CSS"],
         link: "https://anthrope-london.vercel.app/",
-        date: "2021-09-01",
+        date: "2023-12-18",
         price: '850'
     },
     {
@@ -31,7 +31,7 @@ const projects: {
         client: "Cyberpunk 2077",
         tech: ["React", "Tailwind CSS", "Three.js" ,"React Three Fiber"],
         link: "https://cyberpunk-2077-one.vercel.app/",
-        date: "2021-09-01",
+        date: "2024-03-12",
         price: '1199'
     },
     {
