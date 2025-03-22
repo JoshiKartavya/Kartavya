@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import Lenis from "@studio-freight/lenis";
+import { MdArrowBackIosNew } from "react-icons/md";
 
 const ProjectPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -60,7 +61,10 @@ const ProjectPage: React.FC = () => {
         className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none z-50 mix-blend-difference hidden md:block"
         style={{ backgroundColor: "white" }}
       />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-6 xl:p-12">
+      <Link href="/#Projects">
+        <MdArrowBackIosNew className=" absolute text-white text-5xl xl:text-7xl xl:top-8 top-6 xl:left-8 left-4"/>
+      </Link>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-6 xl:p-12 xl:pt-0 pt-20">
         <div className="wrapper w-full xl:w-[60%] flex flex-col justify-center items-center gap-12">
           <div className="top flex flex-row justify-between items-center w-full py-6">
             <h1 className="text-4xl xl:text-7xl font-bold">{project.title}</h1>

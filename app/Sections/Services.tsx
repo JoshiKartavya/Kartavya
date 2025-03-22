@@ -84,7 +84,7 @@ const Services = () => {
                   priority
                 />
                 <div className="absolute bottom-3 left-3 px-3 py-2 rounded-lg w-4/5">
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-6xl 2xl:text-7xl font-bold font-geist">
+                  <h3 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-6xl 2xl:text-7xl font-bold font-geist">
                     {formatTitle(service.title)}
                   </h3>
                 </div>
