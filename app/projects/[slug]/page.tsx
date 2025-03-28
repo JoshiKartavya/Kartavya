@@ -61,8 +61,11 @@ const ProjectPage: React.FC = () => {
         className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none z-50 mix-blend-difference hidden md:block"
         style={{ backgroundColor: "white" }}
       />
-      <Link href="/#Projects">
+
+      <div className="back w-full h-20 flex justify-start items-center cursor-pointer bg-black" onClick={() => window.history.back()}>
         <MdArrowBackIosNew className=" absolute text-white text-5xl xl:text-7xl xl:top-8 top-6 xl:left-8 left-4"/>
+      </div>
+      <Link href="#Projects">
       </Link>
       <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-6 xl:p-12 xl:pt-0 pt-20">
         <div className="wrapper w-full xl:w-[60%] flex flex-col justify-center items-center gap-12">
