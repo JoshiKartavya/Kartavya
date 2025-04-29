@@ -34,6 +34,12 @@ const Footer = () => {
                   className="w-10 h-10 sm:w-12 sm:h-12 xl:w-14 xl:h-14 rounded-full bg-primary text-secondary flex items-center justify-center text-2xl sm:text-3xl xl:text-4xl hover:scale-110 transition-transform"
                   aria-label="Send Email"
                 >
+                  <Image 
+                    src="/arrow.svg" 
+                    alt='email' 
+                    width={4} 
+                    height={4} 
+                    className='w-4 h-4 sm:w-6 sm:h-6 xl:w-8 xl:h-8' />
                 </a>
                 </div>
                 <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-lucidaBoldOblique'>joshikartavya78@gmail.com</h2>
