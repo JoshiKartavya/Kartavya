@@ -27,7 +27,15 @@ const Footer = () => {
           <div className="contact w-full flex flex-col xl:flex-row justify-between items-start gap-8 xl:gap-0">
             <div className="top w-full xl:w-auto flex flex-row justify-between gap-8">
               <div className="email">
+                <div className="flex flex-row items-start gap-3 xl:gap-6">
                 <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold font-sans pb-3 xl:pb-8'>Contact@</h2>
+                <a 
+                  href="mailto:joshikartavya78@gmail.com"
+                  className="w-10 h-10 sm:w-12 sm:h-12 xl:w-14 xl:h-14 rounded-full bg-primary text-secondary flex items-center justify-center text-2xl sm:text-3xl xl:text-4xl hover:scale-110 transition-transform"
+                  aria-label="Send Email"
+                >
+                </a>
+                </div>
                 <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-lucidaBoldOblique'>joshikartavya78@gmail.com</h2>
               </div>
             </div>
@@ -42,9 +50,9 @@ const Footer = () => {
               </div>
               <div className="socials flex flex-col items-start gap-3 xl:gap-6">
                 <h1 className='text-2xl sm:text-3xl xl:text-5xl font-medium'>Connect with Me</h1>
-                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+                {/* <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> */}
+                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="https://instagram.com/kartavya_joshi6" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="https://x.com/ROYALBHUDEV2712" target="_blank" rel="noopener noreferrer">Twitter</a>
                 {/* <a className='text-xl sm:text-2xl xl:text-4xl font-regular' href="https://youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a> */}
               </div>
             </div>
