@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body{
+  scrollbar-width: none; 
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+} */
+.text-dm_sans {
+    font-family: dm_sans;
+}
+
+@font-face {
+    font-family: 'humane-bold';
+    src: url('/fonts/humane/Humane-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'humane-semibold';
+    src: url('/fonts/humane/Humane-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'humane-medium';
+    src: url('/fonts/humane/Humane-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'humane-regular';
+    src: url('/fonts/humane/Humane-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'humane-light';
+    src: url('/fonts/humane/Humane-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'humane-extralight';
+    src: url('/fonts/humane/Humane-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'humane-thin';
+    src: url('/fonts/humane/Humane-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lucida-regular';
+    src: url('/fonts/humane/LTYPE.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lucida-bold';
+    src: url('/fonts/humane/LTYPEB.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lucida-oblique';
+    src: url('/fonts/humane/LTYPEO.ttf') format('truetype');
+    font-weight: 400;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'lucida-bold-oblique';
+    src: url('/fonts/humane/LTYPEBO.ttf') format('truetype');
+    font-weight: 700;
+    font-style: oblique;
+}
