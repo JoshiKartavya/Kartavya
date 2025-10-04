@@ -10,6 +10,20 @@ import gsap from "gsap";
 import Lenis from "@studio-freight/lenis";
 import { MdArrowBackIosNew } from "react-icons/md";
 
+// Define the expected shape of the project data returned from Sanity
+type SanityProject = {
+  _id: string;
+  slug: { current: string };
+  thumbnail?: unknown;
+  title: string;
+  description: string;
+  clientName: string;
+  date: string;
+  price?: string;
+  techStack?: string[];
+  link?: string;
+};
+
 const ProjectPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const [project, setProject] = useState<TransformedProject | null>(null);
@@ -20,10 +34,10 @@ const ProjectPage: React.FC = () => {
   useEffect(() => {
     const fetchProject = async () => {
       if (!slug) return;
-      
+
       try {
         setLoading(true);
-        const projectData = await client.fetch(projectBySlugQuery, { slug });
+        const projectData: SanityProject | null = await client.fetch(projectBySlugQuery, { slug });
         if (projectData) {
           // Transform Sanity data to match the expected format
           const transformedProject: TransformedProject = {
@@ -40,8 +54,12 @@ const ProjectPage: React.FC = () => {
           };
           setProject(transformedProject);
         }
-      } catch (error) {
-        console.error('Error fetching project:', error);
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          console.error('Error fetching project:', error.message);
+        } else {
+          console.error('Error fetching project:', error);
+        }
       } finally {
         setLoading(false);
       }

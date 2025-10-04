@@ -10,6 +10,20 @@ import { client, urlFor } from "@/sanity/lib/client";
 import { projectsQuery } from "@/sanity/lib/queries";
 import { TransformedProject } from "@/types/project";
 
+// Define the expected shape of the project data returned from Sanity
+type SanityProject = {
+  _id: string;
+  slug: { current: string };
+  thumbnail?: unknown;
+  title: string;
+  description: string;
+  clientName: string;
+  date: string;
+  price?: string;
+  techStack?: string[];
+  link?: string;
+};
+
 const Projects = () => {
   const [projects, setProjects] = useState<TransformedProject[]>([]);
   const [loading, setLoading] = useState(true);
@@ -19,9 +33,9 @@ const Projects = () => {
     const fetchProjects = async () => {
       try {
         setLoading(true);
-        const projectsData = await client.fetch(projectsQuery);
+        const projectsData: SanityProject[] = await client.fetch(projectsQuery);
         // Transform Sanity data to match the expected format
-        const transformedProjects: TransformedProject[] = projectsData.map((project: any) => ({
+        const transformedProjects: TransformedProject[] = projectsData.map((project: SanityProject) => ({
           _id: project._id,
           slug: project.slug.current,
           preview: project.thumbnail ? urlFor(project.thumbnail).width(1920).height(1080).url() : '',
@@ -129,4 +143,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
