@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "next/navigation";
 import { client, urlFor } from "@/sanity/lib/client";
 import { projectBySlugQuery } from "@/sanity/lib/queries";
+import { TransformedProject } from "@/types/project";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
@@ -11,7 +12,7 @@ import { MdArrowBackIosNew } from "react-icons/md";
 
 const ProjectPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [project, setProject] = useState<any>(null);
+  const [project, setProject] = useState<TransformedProject | null>(null);
   const [loading, setLoading] = useState(true);
   const cursorRef = useRef<HTMLDivElement>(null);
 
@@ -25,7 +26,7 @@ const ProjectPage: React.FC = () => {
         const projectData = await client.fetch(projectBySlugQuery, { slug });
         if (projectData) {
           // Transform Sanity data to match the expected format
-          const transformedProject = {
+          const transformedProject: TransformedProject = {
             _id: projectData._id,
             slug: projectData.slug.current,
             preview: projectData.thumbnail ? urlFor(projectData.thumbnail).width(1920).height(1080).url() : '',

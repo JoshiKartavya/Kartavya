@@ -8,9 +8,10 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { client, urlFor } from "@/sanity/lib/client";
 import { projectsQuery } from "@/sanity/lib/queries";
+import { TransformedProject } from "@/types/project";
 
 const Projects = () => {
-  const [projects, setProjects] = useState<any[]>([]);
+  const [projects, setProjects] = useState<TransformedProject[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch projects from Sanity
@@ -20,7 +21,7 @@ const Projects = () => {
         setLoading(true);
         const projectsData = await client.fetch(projectsQuery);
         // Transform Sanity data to match the expected format
-        const transformedProjects = projectsData.map((project: any) => ({
+        const transformedProjects: TransformedProject[] = projectsData.map((project: any) => ({
           _id: project._id,
           slug: project.slug.current,
           preview: project.thumbnail ? urlFor(project.thumbnail).width(1920).height(1080).url() : '',
